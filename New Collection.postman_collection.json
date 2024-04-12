@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "1ad594eb-45b9-47c6-80d7-68b067c78cf0",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5865768"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=asd@test.com&password=test123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "asd@test.com"
+						},
+						{
+							"key": "password",
+							"value": "test123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?email=asd@test.com&password=test123&name=test",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "asd@test.com"
+						},
+						{
+							"key": "password",
+							"value": "test123"
+						},
+						{
+							"key": "name",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer: n5rqcKNxW1ZlujbZE35JlALWBwkkjmVK9ntL8pXY991d1528",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/gifs/search?query=cheeseburgers&limit=1&offset=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"gifs",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "cheeseburgers"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favorite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/gifs/favorite?gif_id=xT4uQulxzV39haRFjG&alias=cheesseburger&user_id=1&Authorization=Bearer 5|GvqHkueXdpFQmwY4wrwU28602uQ5ES3dvqwaHNvaec60bd9b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"gifs",
+						"favorite"
+					],
+					"query": [
+						{
+							"key": "gif_id",
+							"value": "xT4uQulxzV39haRFjG"
+						},
+						{
+							"key": "alias",
+							"value": "cheesseburger"
+						},
+						{
+							"key": "user_id",
+							"value": "1"
+						},
+						{
+							"key": "Authorization",
+							"value": "Bearer 5|GvqHkueXdpFQmwY4wrwU28602uQ5ES3dvqwaHNvaec60bd9b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search  by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5YmM4YjZlOC0xOGQyLTRlMWEtYjlkNi0yOTA4NTU5YTE4OTYiLCJqdGkiOiIwZDhhNzlhMmZjYTdkOWRmYWNjMmM0NzE3ZWFkMmU0MjY4ZjlhOWJhMDliNDUxYjc1ZTE4MmEzN2Q3OWQ4ODczMzhmOWQ0OTgwZjMwN2RhNCIsImlhdCI6MTcxMjkyNTY0Ny42ODI2MDcsIm5iZiI6MTcxMjkyNTY0Ny42ODI2MSwiZXhwIjoxNzQ0NDYxNjQ3LjY3MDE2OCwic3ViIjoiMiIsInNjb3BlcyI6W119.SeA-xi6hWthwtG7CZ-58BknSMti0_FWSOfXQSAlsTXGm7SwHm-xbgwzpWDUdDFMcnA_PF2mniV2htyeyvI92fLztJ0nXDxefJT-9EYh-9eQxuO3LXitPMGPyA71QbTnO8WiZxAL_DI1Q-f1lC_edAhZa2HJyBcXhN0rbZjqxNg4m6U5joGAu5_SAB0PaDlP2NAv1sDEMN1UxbAeo6VAb2QkmkpP7k2Kv0jGA7mVxPHW_f9RDGf1-7zTjTDAIixkAhZ1asRXpuFHC3AsZP60dfZT8P-sbvwriJcqmQD0SuR-NWw43WF2ziJGUk1Tyw0rfFwVbpHHp2JnVioydtZ2Kkutc3tE7MzhcJeb0EwXn8iprB7-29IkQSmwoI4KxFzoLgfxwPGP40_vIhpASIUvmW_bQCKeoo_SmT3X0SHWSFuwgH0nF64vH7oCTEgJUgRTgNFnn5fHFER2f0FjT602rDlHgB6TZh1eDExQbxReJ2VT7jzYYMyjdwfpSz4y_UqIpMHCxFr5NKJMFuJRi1rWRUlBbsUS9oisL12gtXQgIG-MfTlQkVi0uCzvocNJnkA4v05RN4YFE4dYHn56rS-NU58FNY1nC1vTLqRxvhRla6y0920SqXGJLs6PhX56gOksL7f87bMCAfzBJ_M6dq7iZ4I79-EX3X1OzXk7U61nMZs8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/gifs/search/xT4uQulxzV39haRFjG",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"gifs",
+						"search",
+						"xT4uQulxzV39haRFjG"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "cheeseburgers",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "offset",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

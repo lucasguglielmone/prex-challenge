@@ -51,7 +51,6 @@ class GifController extends Controller
         $limit = $request->input('limit', 25);
         $offset = $request->input('offset', 0);
 
-        $url = config('giphy.domain').'search';
         $response = $this->searchGifs($query, $limit, $offset);
 
         $responseCode = $response['meta']['status'];
@@ -59,17 +58,12 @@ class GifController extends Controller
 
         $this->registerInteraction($request, 'search', $responseCode, $responseData);
 
-        return $response;
+        return $response['data'];
     }
 
     public function searchById(Request $request, $id)
     {
-        $query = $request->input('query');
-        $limit = $request->input('limit', 25);
-        $offset = $request->input('offset', 0);
-
-        $url = config('giphy.domain').'search';
-        $response = $this->searchGifById($query, $limit, $offset);
+        $response = $this->searchGifById($id);
 
         $responseCode = $response['meta']['status'];
         $responseData = json_encode($response['data']);
